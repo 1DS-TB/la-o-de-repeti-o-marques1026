@@ -1,11 +1,15 @@
 # exercicio 5
 
-primo = int(input("insira um numero: "))
+primo = int(input("Insira um número: "))
 contador = 0
-for num in range (1, primo +1):
-    if (primo % num) == 0:
-        contador = contador + 1
-if contador == 2:
-    print("o numero inserido é primo")
+
+if primo < 2:
+    print("Números menores que 2 não são primos.")
 else:
-    print("o numero inserido não é primo")
+    for num in range(1, primo + 1):
+        if primo % num == 0:
+            contador += 1
+    if contador == 2:
+        print("O número inserido é primo.")
+    else:
+        print("O número inserido não é primo.")
